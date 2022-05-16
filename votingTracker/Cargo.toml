@@ -1,0 +1,22 @@
+[package]
+name = "votingtracker"
+version = "0.0.1"
+description = "Voting Tracker program written in Rust"
+authors = ["Bill Lu <bill.lu@aptimasolutions.com>"]
+repository = "https://github.com/solana-labs/solana"
+license = "Apache-2.0"
+homepage = "https://solana.com/"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+voting = {path="../voting", features=["no-entrypoint"]}
+borsh = "0.9"
+solana-program = "=1.7.9"
+thiserror = "1.0"
+
+[lib]
+name = "votingtracker"
+crate-type = ["cdylib", "lib"]
